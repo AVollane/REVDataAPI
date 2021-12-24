@@ -29,7 +29,7 @@ namespace RXVBack.Controllers
         {
             if(neuronetInformation != null)
             {
-                Logger.LogInformation($"\nId: {neuronetInformation.Mood},\nGender: {neuronetInformation.Gender},\n" +
+                Logger.LogInformation($"\nId: {neuronetInformation.Id},\nGender: {neuronetInformation.Gender},\n" +
                     $"Age: {neuronetInformation.Age},\nMood: {neuronetInformation.Mood}\n");
                 return Ok();
             }
