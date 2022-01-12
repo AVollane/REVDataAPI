@@ -1,5 +1,4 @@
-﻿using RXVBackDL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace RXVBackDL.Repository
 {
-    public interface IRepository<T> where T: Entity
+    public interface IRepository<T> : IDisposable where T : class
     {
-        IQueryable<T> GetAll();
-        bool Save(T entity);
-        bool Delete(int id);
-        bool Delete(T entity);
+        public IEnumerable<T> GetAll();
+        public T Get(int id);
+        public void Create(T item);
+        public void Update(T item);
+        public void Delete(int id);
+        public void Save();
     }
 }
