@@ -1,8 +1,4 @@
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.SignalR;
-using RXVBack.Concurrency;
-using RXVBack.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +8,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// Adding SignalR
-builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -38,9 +31,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.UseRouting();
-
-app.MapHub<RemoteLoggingHub>("/hubs/serverlogging");
 
 app.Run();

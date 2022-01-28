@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RXVBackDL", "RXVBackDL\RXVB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RXVTests", "RXVTests\RXVTests.csproj", "{95C4EC8A-B292-48D9-B07D-8E3461C3F232}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRStreaming", "SignalRStreaming\SignalRStreaming.csproj", "{995AA16D-A8D3-47E6-9135-1EDBA71299CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{95C4EC8A-B292-48D9-B07D-8E3461C3F232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C4EC8A-B292-48D9-B07D-8E3461C3F232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C4EC8A-B292-48D9-B07D-8E3461C3F232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995AA16D-A8D3-47E6-9135-1EDBA71299CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995AA16D-A8D3-47E6-9135-1EDBA71299CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995AA16D-A8D3-47E6-9135-1EDBA71299CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995AA16D-A8D3-47E6-9135-1EDBA71299CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
