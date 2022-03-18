@@ -9,6 +9,10 @@ using System.Text.Json;
 
 namespace RXVBack.Controllers
 {
+    /// <summary>
+    /// Main neuronet controller that take information from neuronet by POST-requests.
+    /// Contains logger for sending logs to remote client 
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class NeuronetController : Controller

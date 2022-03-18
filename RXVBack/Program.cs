@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.SignalR;
-using RXVBack.Concurrency;
 using RXVBack.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,9 +20,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Использование Swagger для тестирования API. Закоментирована, т.к. Swagger мы не используем
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+
 }
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
@@ -41,6 +38,6 @@ app.MapControllers();
 
 app.UseRouting();
 
-app.MapHub<RemoteLoggingHub>("/hubs/serverlogging");
+app.MapHub<RemoteLoggingHub>("/hubs/serverlogging"); // set the hub pasth
 
 app.Run();
