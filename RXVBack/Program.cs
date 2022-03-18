@@ -38,6 +38,6 @@ app.MapControllers();
 
 app.UseRouting();
 
-app.MapHub<RemoteLoggingHub>("/hubs/serverlogging"); // set the hub pasth
+app.MapHub<RemoteLoggingHub>("/hubs/serverlogging"); // set the hub path
 
 app.Run();
