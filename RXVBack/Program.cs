@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.SignalR;
-using RXVBack.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,9 +33,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.UseRouting();
-
-app.MapHub<RemoteLoggingHub>("/hubs/serverlogging"); // set the hub pasth
 
 app.Run();
